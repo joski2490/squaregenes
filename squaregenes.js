@@ -572,7 +572,7 @@ function verbose() { return (_update & 0xFF) === 0 }
 
 // update world ... dt is fixed, not really depending on time
 function update(dt) {
-    _update += 2// 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    _update += 1.33// 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     var start = currentTime()
     var removed = []
     allentities = 0
