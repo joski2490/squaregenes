@@ -133,7 +133,7 @@ const IF_RANDOM = 3 // if signal <= rndint(8)
 // **** setup entities/parts ****
 
 // constants
-const MUTATION_RATE = 0.01
+const MUTATION_RATE = 0.1// 0.01!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const ENERGY_GENE_COST = 1 / 20
 const START_LIFE = 1000 // alive for only 1000 ticks ~ 50 seconds @ 20 ticks per second
 const START_ENERGY = 1.33
@@ -572,7 +572,7 @@ function verbose() { return (_update & 0xFF) === 0 }
 
 // update world ... dt is fixed, not really depending on time
 function update(dt) {
-    _update += 1
+    _update += 2// 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     var start = currentTime()
     var removed = []
     allentities = 0
