@@ -41,7 +41,7 @@ license: MIT
 */
 
 var POW = 8 // world is a 2^POW sized, huge worlds eat a lot of cpu (8 or 9 works well) !!!!!!!!!!!!!!!!!!! 7 !!!!!!
-var SCALE = 4 // draw each part as a SCALExSCALE rectangle !!!!!!!!!!!!!!!!!!! 3 !!!!!!!!!!
+var SCALE = 3 // draw each part as a SCALExSCALE rectangle !!!!!!!!!!!!!!!!!!! 3 !!!!!!!!!!
 var ALLOW_MULTI_NUCLEI = true // allow a single entity to have more then one nuclei
 var VERTICAL = false
 
@@ -133,19 +133,19 @@ const IF_RANDOM = 3 // if signal <= rndint(8)
 // **** setup entities/parts ****
 
 // constants
-const MUTATION_RATE = 0.1// 0.01!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-const ENERGY_GENE_COST = 1 / 20
-const START_LIFE = 1000 // alive for only 1000 ticks ~ 50 seconds @ 20 ticks per second
-const START_ENERGY = 1.33
-const MAX_ENERGY = 2
-const MAX_SEED_ENERGY = 3
-const NEW_PART_COST = 1
+const MUTATION_RATE = 2.5// 0.01!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+const ENERGY_GENE_COST = 1 / 100
+const START_LIFE = 1500 // alive for only 1000 ticks ~ 50 seconds @ 20 ticks per second ---- 1000
+const START_ENERGY = 4 //1.33
+const MAX_ENERGY = 5 // 3
+const MAX_SEED_ENERGY = 5 // 3
+const NEW_PART_COST = 1 / 10 // 1
 const NEW_SEED_COST = 1.33
 const START_FOOD = NEW_PART_COST * 0.8
 const KILL_COST = 0.3
 
 // per second constants
-const GREEN_ENERGY_ADD = 0.75
+const GREEN_ENERGY_ADD = 1 // 0.75
 const FOOD_ENERGY_ADD = 4
 
 // entity has one or more parts, and at least one nucleus, it keeps track of energy and some statistics
@@ -572,7 +572,7 @@ function verbose() { return (_update & 0xFF) === 0 }
 
 // update world ... dt is fixed, not really depending on time
 function update(dt) {
-    _update += 1.33// 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    _update += 2// 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     var start = currentTime()
     var removed = []
     allentities = 0
