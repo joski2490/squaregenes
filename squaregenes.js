@@ -41,7 +41,7 @@ license: MIT
 */
 
 var POW = 8 // world is a 2^POW sized, huge worlds eat a lot of cpu (8 or 9 works well)
-var SCALE = 3 // draw each part as a SCALExSCALE rectangle
+var SCALE = 4 // draw each part as a SCALExSCALE rectangle
 var ALLOW_MULTI_NUCLEI = true // allow a single entity to have more then one nuclei
 var VERTICAL = false
 
