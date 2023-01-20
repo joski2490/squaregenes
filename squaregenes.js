@@ -133,7 +133,7 @@ const IF_RANDOM = 3 // if signal <= rndint(8)
 // **** setup entities/parts ****
 
 // constants
-const MUTATION_RATE = 0.1
+const MUTATION_RATE = 0.9
 const ENERGY_GENE_COST = 1 / 20
 const START_LIFE = 1000 // alive for only 1000 ticks ~ 50 seconds @ 20 ticks per second
 const START_ENERGY = 1.33
